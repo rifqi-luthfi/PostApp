@@ -3,8 +3,6 @@ plugins {
     id 'kotlin-android'
     //plugin kotlin-android-extensions agar kodingan menjadi lebih ringan dan ringkas
     id 'kotlin-android-extensions'
-    //untuk menggunakan anotasi menggunakan bahasa kotlin
-    id 'kotlin-kapt'
 }
 
 android {
@@ -44,12 +42,13 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
-    //room = Membuat, menyimpan, dan mengelola data persisten yang didukung oleh database SQLite.
-    implementation("androidx.room:room-runtime:2.3.0")
-    kapt "androidx.room:room-compiler:2.3.0"
-
     //RecyclerView = Menampilkan set data dalam jumlah besar dalam UI sambil meminimalkan penggunaan memori.
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
