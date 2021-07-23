@@ -1,5 +1,6 @@
-package com.example.postapp
+package com.example.postapp.database
 
+import com.example.postapp.PostAppInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -8,7 +9,7 @@ object RetrofitClient {
     private val client = OkHttpClient.Builder().apply {
         addInterceptor(PostAppInterceptor())
     }.build()
-    private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+    private const val BASE_URL = "http://post.jonathandarwin.com/"
 
     val instance: Api by lazy {
         val retrofit = Retrofit.Builder()
